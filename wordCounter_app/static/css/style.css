@@ -1,0 +1,16 @@
+.nav{
+    border-bottom: 0;
+}
+.nav-link{
+    padding-bottom: 1rem;
+    color: #fff !important;
+}
+.active{
+    color: black !important;
+    /* background-color: #fff !important;
+    border-color: #fff; */
+}
+.fcbg{
+    background-color: #d9edf7;
+}
+    

@@ -1,0 +1,33 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg p-0" style="background: #428bca;">
+  <div class="container">
+    <a class="navbar-brand p-0" href="/"><img src="{% static 'img/wc-logo.webp' %}" style="height: 40px;"
+        alt="Logo"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="nav nav-tabs pt-3">
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/' %} active {% endif %}" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/blog/' %} active {% endif %}" href="/blog/">Blog</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle {% if request.path == '/more/' %} active {% endif %}" data-bs-toggle="dropdown" href="/more/" role="button"
+            aria-expanded="false">More</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">More Tools</a></li>
+            <li><a class="dropdown-item" href="#">Help Us Out</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Sign In <i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
